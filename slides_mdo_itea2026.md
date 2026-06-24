@@ -65,7 +65,6 @@ ITEA All/Multi-Domain Operations Forum · July 14–16, 2026 · Huntsville, AL
 Vendor lock-in is not an acquisition inconvenience — it is a <strong>structural source of fragility in the kill web</strong>
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -107,7 +106,6 @@ Re-hosting. Re-evaluating. Re-integrating.<br/>Across all five domains.
 Vendor-agnostic AI is not an acquisition preference — it is a <strong>structural requirement of CJADC2</strong>
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -155,7 +153,6 @@ MLflow or DVC capture hyperparameters, training data references, dependency spec
 These primitives apply at the same layer where vendor lock-in enters — and compose into a <strong>T&E reproducibility framework</strong>
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -187,7 +184,6 @@ A model packaged under this framework can be <strong>re-hosted, re-evaluated, an
 <strong>Result:</strong> Any T&E organization can reproduce the test — not just the originating vendor
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -211,7 +207,6 @@ A model packaged under this framework can be <strong>re-hosted, re-evaluated, an
 Every failure class produces the same outcome: <strong>per-service test silos</strong> that cannot be aggregated into joint mission threads
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -264,7 +259,6 @@ Maritime domain kill-chain automation
 Vendor-agnostic packaging <strong>shortens cross-service integration timelines</strong> and produces reproducible joint test records
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -301,7 +295,6 @@ Vendor-agnostic packaging <strong>shortens cross-service integration timelines</
 WAS policy + CJADC2 architecture + T&E reproducibility framework = <strong>a single codifiable standard for Joint T&E guidance</strong>
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -344,7 +337,6 @@ WAS policy + CJADC2 architecture + T&E reproducibility framework = <strong>a sin
 The same four primitives that prevent acquisition lock-in <strong>also enable cross-enclave capability promotion</strong>
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -392,7 +384,6 @@ Portfolio Acquisition Executives (established under WAS) should treat vendor-agn
 These four recommendations directly implement the WAS dual-source mandate in the AI/ML domain
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 
@@ -436,7 +427,6 @@ These four recommendations directly implement the WAS dual-source mandate in the
 The T&E community is uniquely positioned to champion vendor-agnostic AI — through test criteria, contract language, and cross-service reproducibility standards
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 ---
 layout: end
