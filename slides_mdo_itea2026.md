@@ -446,10 +446,11 @@ OCI containers · ONNX interchange · Infrastructure-as-Code · Vendor-neutral e
 
 Codify vendor-agnostic packaging in Joint T&E guidance. Make it a test criterion, not a preference.
 
----
+<div class="text-xl italic mt-6" style="color: #2E7D32;">
+T&E practitioners are well positioned to help build the <strong>arsenal of freedom</strong>.
+</div>
 
-T&E practitioners are well positioned to help build the **arsenal of freedom**.
-
-**Sam Bright · Michael Soltys** · GBL Systems Corporation
-
-*Distribution A — Approved for Public Release*
+<div class="mt-4 text-sm opacity-60">
+Sam Bright · Michael Soltys · GBL Systems Corporation<br/>
+Distribution A — Approved for Public Release
+</div>
