@@ -1,5 +1,6 @@
 ---
 theme: default
+colorSchema: light
 title: "Vendor-Agnostic AI as a Multi-Domain Operations Enabler: Test, Integration, and Mission Engineering Across the Kill Web"
 info: |
   ## Vendor-Agnostic AI as a Multi-Domain Operations Enabler
