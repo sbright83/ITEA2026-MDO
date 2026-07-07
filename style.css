@@ -1,0 +1,128 @@
+:root {
+  --mdo-navy: #1E2761;
+  --mdo-navy-dark: #141B45;
+  --mdo-navy-black: #1A1F2E;
+  --mdo-gold: #C9A227;
+  --mdo-periwinkle: #CADCFC;
+  --mdo-panel: #EEF4FD;
+  --mdo-gray: #5A6478;
+  --mdo-font-heading: Cambria, Georgia, 'Times New Roman', serif;
+  --mdo-font-body: Calibri, Carlito, 'Segoe UI', Candara, Optima, Arial, sans-serif;
+}
+
+.slidev-layout {
+  font-family: var(--mdo-font-body);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--mdo-gray);
+}
+
+.slidev-layout h1 {
+  font-family: var(--mdo-font-heading);
+  color: var(--mdo-navy);
+  font-size: 1.85rem;
+  margin-bottom: 0.3em;
+}
+
+.slidev-layout h3 {
+  font-family: var(--mdo-font-heading);
+  color: var(--mdo-navy);
+  font-size: 1.05rem;
+  margin: 0.5em 0 0.25em;
+  padding-bottom: 0.15em;
+  border-bottom: 2px solid var(--mdo-gold);
+  display: inline-block;
+}
+
+.slidev-layout p,
+.slidev-layout ul,
+.slidev-layout ol {
+  margin: 0.35em 0;
+}
+
+.slidev-layout li {
+  margin: 0.15em 0;
+}
+
+.slidev-layout strong {
+  color: var(--mdo-navy-black);
+}
+
+.slidev-layout ul > li::marker {
+  color: var(--mdo-gold);
+}
+
+.slidev-layout table {
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.slidev-layout table th {
+  background: var(--mdo-panel);
+  color: var(--mdo-navy);
+  padding: 0.3em 0.5em;
+  text-align: left;
+}
+
+.slidev-layout table td {
+  padding: 0.3em 0.5em;
+  border-top: 1px solid #dde3ee;
+  vertical-align: top;
+}
+
+/* plain layout grid for parallel sub-sections — no per-item borders/backgrounds */
+.mdo-grid {
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.4rem;
+}
+
+.mdo-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mdo-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mdo-grid > * {
+  min-width: 0;
+}
+
+.mdo-grid h3 {
+  font-size: 0.95rem;
+}
+
+.mdo-grid p {
+  font-size: 0.85rem;
+}
+
+.compact-table table {
+  font-size: 0.72rem;
+}
+
+.compact-table td,
+.compact-table th {
+  padding: 0.2em 0.4em;
+}
+
+.dark-cover {
+  background: var(--mdo-navy-dark);
+  color: var(--mdo-periwinkle);
+}
+
+.dark-cover h1,
+.dark-cover h3 {
+  color: #fff;
+  border-bottom-color: var(--mdo-gold);
+}
+
+.dark-cover strong {
+  color: var(--mdo-periwinkle);
+}
+
+.slidev-layout svg {
+  max-width: 100%;
+  height: auto;
+}

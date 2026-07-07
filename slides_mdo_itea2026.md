@@ -1,12 +1,11 @@
 ---
 theme: default
-background: https://cover.sli.dev
 title: "Vendor-Agnostic AI as a Multi-Domain Operations Enabler: Test, Integration, and Mission Engineering Across the Kill Web"
 info: |
   ## Vendor-Agnostic AI as a Multi-Domain Operations Enabler
   ITEA 2026 All/Multi-Domain Operations Forum
   July 14–16, 2026 · Huntsville, Alabama
-class: text-center
+class: dark-cover text-center
 highlighter: shiki
 lineNumbers: false
 drawings:
@@ -39,6 +38,10 @@ Companion papers: ITEA Journal Vol. 47, Issue 2 — "Avoiding Vendor Lock-In in 
 
 # Vendor Lock-In Degrades the Kill Web
 
+<div class="mdo-grid mdo-grid-2">
+
+<div>
+
 ### When Every Node Runs a Different ML Stack
 
 **Army (Project Convergence)** — proprietary training frameworks, custom model formats
@@ -49,11 +52,19 @@ Companion papers: ITEA Journal Vol. 47, Issue 2 — "Avoiding Vendor Lock-In in 
 
 <div class="text-xs opacity-60 mt-1">Representative risk patterns in vendor-locked ML deployments — illustrative, not assessments of specific program implementations.</div>
 
+</div>
+
+<div>
+
 ### Three Failure Modes That Degrade MDO Mission Threads
 
 - **Porting latency** — a model trained for Project Convergence cannot be re-hosted for Project Overmatch without months of work
 - **Cross-classification stall** — proprietary runtimes do not transfer across classification enclaves
 - **Test silos** — joint test events lose reproducibility because no two services can re-run the same model on the same data
+
+</div>
+
+</div>
 
 Vendor lock-in is not an acquisition inconvenience — it is a **structural source of fragility in the kill web**
 
@@ -65,6 +76,8 @@ Vendor lock-in is not an acquisition inconvenience — it is a **structural sour
 
 Integrates sensors, processors, decision aids, and effectors spanning **all five domains**: land, air, sea, space, and cyberspace.
 
+<div class="compact-table">
+
 | Domain | Capability | Representative Lock-In Risk |
 | ------ | ---------- | --------------------------- |
 | Land   | Target acquisition (Convergence) | Proprietary training framework + single-cloud dependency |
@@ -72,6 +85,8 @@ Integrates sensors, processors, decision aids, and effectors spanning **all five
 | Sea    | Overmatch kill-chain | Single-cloud inference dependency |
 | Space  | SDA sensor mesh | Proprietary model format |
 | Cyber  | AI threat detection | Platform-tied model serving |
+
+</div>
 
 <div class="text-xs opacity-60">Illustrative risk patterns showing where lock-in can enter each domain — not attributions to specific programs or vendors.</div>
 
@@ -87,21 +102,41 @@ Vendor-agnostic AI is not an acquisition preference — it is a **structural req
 
 ### Four Technical Building Blocks That Restore Portability
 
+<div class="mdo-grid mdo-grid-2">
+
+<div>
+
 **1. OCI-Compliant Containers**
 
 Package ML models in Open Container Initiative images. Any OCI-compliant runtime (Docker, Podman, containerd) on any cloud or enclave can execute the workload.
+
+</div>
+
+<div>
 
 **2. ONNX Model Interchange**
 
 The Open Neural Network Exchange format decouples training from inference. Train in PyTorch or TensorFlow; deploy anywhere ONNX Runtime runs — including air-gapped enclaves.
 
+</div>
+
+<div>
+
 **3. Infrastructure-as-Code**
 
 Terraform or Pulumi definitions make deployment fully reproducible. A config for AWS GovCloud instantiates on Azure Government or on-premise with parameter changes — not a rewrite.
 
+</div>
+
+<div>
+
 **4. Vendor-Neutral Experiment Tracking**
 
 MLflow or DVC capture hyperparameters, training data references, dependency specs, and configurations — enabling vendor migration without losing institutional knowledge.
+
+</div>
+
+</div>
 
 These primitives apply at the same layer where vendor lock-in enters — and compose into a **T&E reproducibility framework**
 
@@ -113,7 +148,7 @@ These primitives apply at the same layer where vendor lock-in enters — and com
 
 A model packaged under this framework can be **re-hosted, re-evaluated, and re-integrated** by any service's test organization — without vendor dependency.
 
-```mermaid {scale: 0.65}
+```mermaid {scale: 0.5}
 flowchart LR
   subgraph PKG["ML CAPABILITY PACKAGE — service-agnostic"]
     direction TB
@@ -141,6 +176,8 @@ OPTEVFOR (Commander, Operational Test and Evaluation Force) is the Navy's operat
 
 ### How Vendor Lock-In Breaks Specific MDO Mission Threads
 
+<div class="compact-table">
+
 | Failure Class | MDO Thread Affected | Root Cause |
 | ------------- | ------------------- | ---------- |
 | **Framework Lock** | Army-to-Navy model transfer (Convergence → Overmatch) | PyTorch checkpoint cannot run on vendor B's serving stack |
@@ -148,6 +185,8 @@ OPTEVFOR (Commander, Operational Test and Evaluation Force) is the Navy's operat
 | **Cloud Lock** | Cross-command AI capability sharing | Model artifact tied to one cloud provider's proprietary lineage/serving format |
 | **Enclave Lock** | IL4 → IL6 capability promotion | Container image built with commercial-cloud libraries; no air-gapped equivalent |
 | **Observation Lock** | Joint after-action review | Experiment metadata in vendor-proprietary format; cannot replay on peer infrastructure |
+
+</div>
 
 <div class="text-xs opacity-60">Representative failure patterns compiled from the lock-in mechanisms documented in our ITEA Journal companion paper — illustrative mission threads, not incident reports.</div>
 
@@ -157,29 +196,45 @@ Every failure class produces the same outcome: **per-service test silos** that c
 
 # Three Multi-Domain Test Contexts
 
+<div class="mdo-grid mdo-grid-3">
+
+<div>
+
 ### GIDE — the proof it works
 
-**Global Information Dominance Experiments (CDAO)** · Multi-domain AI-enabled decision superiority across combatant commands
+**Global Information Dominance Experiments (CDAO)** · Decision superiority across combatant commands
 
-**Demonstrated exemplar:** GIDE's vendor-agnostic data integration layers sustained operational availability above 99.5% across combatant commands — validating vendor independence at operational scale (see our ITEA Journal companion paper)
+**Demonstrated exemplar:** Vendor-agnostic data integration sustained >99.5% availability across combatant commands (companion paper)
 
-**Framework extension:** OCI images + MLflow records as the standard artifact format for experiment-to-experiment (GIDE-N → GIDE-N+1) model baselines
+**Framework extension:** OCI images + MLflow records as the artifact standard for GIDE-N → GIDE-N+1 baselines
+
+</div>
+
+<div>
 
 ### ABMS — where the risk lives
 
-**Advanced Battle Management System (Air Force)** · Sensor-to-shooter network across air and space domains
+**Advanced Battle Management System (Air Force)** · Sensor-to-shooter network across air and space
 
-**Lock-in risk (illustrative):** Proprietary inference runtimes would prevent Army and Navy sensor adapters from contributing ML components without full vendor re-engagement
+**Lock-in risk (illustrative):** Proprietary runtimes would block Army/Navy sensor adapters without full vendor re-engagement
 
 **Framework fix:** ONNX as the interchange format for all ABMS AI nodes
+
+</div>
+
+<div>
 
 ### Project Overmatch — where the risk lives
 
 **Kill-chain automation (Navy)** · Maritime domain kill-chain automation
 
-**Lock-in risk (illustrative):** Models ported from Project Convergence would require months of re-integration; joint test windows missed
+**Lock-in risk (illustrative):** Models ported from Convergence would need months of re-integration; joint test windows missed
 
 **Framework fix:** IaC definitions as the Overmatch re-hosting specification
+
+</div>
+
+</div>
 
 Vendor-agnostic packaging **shortens cross-service integration timelines** and produces reproducible joint test records
 
@@ -193,6 +248,10 @@ Framing: GIDE is the positive exemplar (consistent with our published paper); AB
 
 ### Two Mandates, One Engineering Answer
 
+<div class="mdo-grid mdo-grid-2">
+
+<div>
+
 ### Warfighting Acquisition System
 
 **Secretary Hegseth — WAS memorandum & National War College remarks, November 2025**
@@ -202,11 +261,19 @@ Framing: GIDE is the positive exemplar (consistent with our published paper); AB
 - Commercial-first, modular, performance-based contracting
 - Recent commercial AI supply-chain disruptions underscore that single-vendor dependency is an operational risk, not just a cost risk (detailed in our ITEA Journal companion papers)
 
+</div>
+
+<div>
+
 ### CJADC2 Operational Requirements
 
 - Joint interoperability across all five domains and coalition partners
 - No single service's ML stack can be the authoritative runtime for joint capabilities
 - Cross-classification portability: NIPRNet IL4 through SIPRNet IL6
+
+</div>
+
+</div>
 
 WAS policy + CJADC2 architecture + T&E reproducibility framework = **a single codifiable standard for Joint T&E guidance**
 
@@ -221,6 +288,8 @@ Verify the supply-chain bullet wording against the companion paper before presen
 
 ### The Enclave Portability Problem
 
+<div class="compact-table">
+
 | Level | Environment | Vendor Lock-In Risk |
 | ----- | ----------- | ------------------- |
 | **IL4** | NIPRNet (CUI) | Cloud-specific model serving (e.g., managed inference services) |
@@ -228,15 +297,21 @@ Verify the supply-chain bullet wording against the companion paper before presen
 | **IL6** | SIPRNet (SECRET) | Air-gapped; commercial cloud inference unavailable |
 | **DDIL*** | Tactical edge | Disconnected; model must run on organic compute |
 
+</div>
+
 <div class="text-xs opacity-60">* DDIL (denied, degraded, intermittent, limited) is an operating condition, not a DoD impact level — included to complete the deployment continuum.</div>
 
 ### Framework Solution Per Level
+
+<div class="mdo-grid mdo-grid-3">
 
 **IL4 → IL5:** IaC definition parameterizes cloud provider; ONNX model unchanged
 
 **IL5 → IL6:** OCI image carries its own runtime; no internet dependency
 
 **IL6 → DDIL:** Slim OCI image + quantized ONNX model fits on edge compute (Jetson, tactical GPU servers)
+
+</div>
 
 The same four primitives that prevent acquisition lock-in **also enable cross-enclave capability promotion**
 
@@ -246,21 +321,41 @@ The same four primitives that prevent acquisition lock-in **also enable cross-en
 
 ### Codifying Vendor-Agnostic Standards
 
+<div class="mdo-grid mdo-grid-2">
+
+<div>
+
 **1. Mandatory Artifact Standard**
 
 All ML capabilities submitted for Joint T&E events must include: ONNX model export, OCI container image, IaC deployment definition, MLflow experiment record. No proprietary-only artifacts accepted.
+
+</div>
+
+<div>
 
 **2. Cross-Service Re-Evaluation Requirement**
 
 Every AI capability in a joint test event must be re-hostable by at least one peer-service T&E organization within a defined re-host window (e.g., 30 days), using only the submitted artifact package.
 
+</div>
+
+<div>
+
 **3. Contract Language**
 
 Incorporate dual-source and open-artifact requirements into AI/ML task order language. Data rights provisions must ensure government ownership of model weights and training metadata.
 
+</div>
+
+<div>
+
 **4. PAE Integration**
 
 Portfolio Acquisition Executives (established under WAS) should treat vendor-agnostic packaging as a gate criterion for AI capability advancement across program phases.
+
+</div>
+
+</div>
 
 These four recommendations directly implement the WAS dual-source mandate in the AI/ML domain
 
@@ -272,11 +367,19 @@ If asked where the 30-day figure comes from: it is our proposed starting point f
 
 # What T&E Practitioners Can Do Now
 
+<div class="mdo-grid mdo-grid-3">
+
+<div>
+
 ### Immediate (0–90 Days)
 
 - **Audit current AI/ML contracts** for vendor lock-in provisions; identify capabilities with no second source
 - **Require ONNX exports** in all new AI/ML task orders as a deliverable line item
 - **Stand up a multi-vendor inference evaluation** to establish a reproducibility baseline
+
+</div>
+
+<div>
 
 ### Near-Term (90–180 Days)
 
@@ -284,17 +387,25 @@ If asked where the 30-day figure comes from: it is our proposed starting point f
 - **Draft IaC templates** for the most common enclave configurations (IL4 GovCloud, IL5 dedicated, IL6 on-premise GPU)
 - **Include cross-service re-host** as a T&E success criterion alongside performance metrics
 
+</div>
+
+<div>
+
 ### Policy Track (Ongoing)
 
 - **Engage PAEs** to incorporate vendor-agnostic packaging criteria into AI/ML source selection
 - **Submit to Joint T&E community** for codification in joint test guidance
 - **Align with CJADC2 architecture boards** to standardize the artifact format across services
 
+</div>
+
+</div>
+
 The T&E community is uniquely positioned to champion vendor-agnostic AI — through test criteria, contract language, and cross-service reproducibility standards
 
 ---
 layout: end
-class: text-center
+class: dark-cover text-center
 ---
 
 # T&E as a Driver of MDO Resilience
